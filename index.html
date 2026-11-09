@@ -6,7 +6,9 @@
   <meta name="theme-color" content="#0a1119">
   <meta name="description" content="NGS OPS V1.1 interactive security operations SaaS alpha demo. Fictional pilot data only.">
   <title>NGS OPS · V1.1 Alpha Operations</title>
+  <script src="./theme.js"></script>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./theme.css">
   <script src="./app.js" defer></script>
 </head>
 <body>
@@ -20,7 +22,7 @@
     <div class="workspace">
       <header class="topbar">
         <div class="top-left"><button id="menuBtn" class="mobile-menu" aria-label="Toggle navigation">☰</button><span class="crumb">NGS OPS <span>/</span> <span id="crumbPage">Command Center</span></span></div>
-        <div class="top-actions"><span class="top-date" id="today"></span><span class="env-pill">● PUBLIC DEMO</span></div>
+        <div class="top-actions"><span class="top-date" id="today"></span><button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="theme-toggle-label">Dark mode</span></button><span class="env-pill">● PUBLIC DEMO</span></div>
       </header>
       <main>
         <section class="page-intro"><div><p class="eyebrow" id="pageEyebrow">OPERATIONS OVERVIEW</p><h1 id="pageTitle">Command Center</h1><p class="subheading" id="pageSubtitle">Monitor site coverage, incidents and patrols.</p></div><div class="persona-panel"><label for="persona">DEMO PERSONA</label><select id="persona" aria-label="Switch fictional demo persona"></select><label for="orgSelect" id="orgLabel">ORGANIZATION</label><select id="orgSelect" aria-label="Select organization"></select></div></section>
