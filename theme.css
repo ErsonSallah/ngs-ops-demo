@@ -1,0 +1,91 @@
+/* NGS OPS V1.1 brand palette — visual layer only.
+   NGS reference: midnight navy, royal blue, security red, white.
+   No workflow, layout or report logic is changed here. */
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0d1329;--nav:#171d3b;--panel:#1d2748;--panel2:#253253;
+  --border:#354368;--text:#f4f6ff;--muted:#aebbd7;
+  --accent:#94aaff;--teal:#f0747b;--warn:#ffd18d;--danger:#ff8b94;--blue:#a7bcff;
+  --shadow:0 16px 45px #060c2466;
+  --input-bg:#222e50;--input-border:#4a5a80;--focus-ring:#8ca6ff33;
+  --side-label:#9aaad0;--nav-item:#c1cbe5;--nav-hover:#2b365c;
+  --nav-active:#30427a;--nav-active-border:#6d87d8;
+  --logo-border:#de465d99;--logo-bg:#b6203030;--logo-ink:#f06b78;
+  --disclaimer-bg:#222c4b;--disclaimer-border:#596686;--disclaimer-text:#dbe2f4;
+  --metric-start:#222e54;--metric-end:#1a2442;--divider:#354365;
+  --pill-bg:#303e60;--pill-text:#d9e2f8;--success:#85e3b1;--success-bg:#2d7c5550;
+  --warn-bg:#e9ad3b24;--red-bg:#da46512b;--blue-bg:#7294f12b;
+  --button-bg:#3b52c9;--ghost-bg:#273456;--danger-border:#b74e60;
+  --field-label:#c7d0e8;--table-heading:#b6c4e3;--info-bg:#243254;
+  --number-bg:#3b4a73;--success-ink:#0d2b20;
+  --hero-glow:#c0274433;--hero-start:#283764;--hero-end:#1c284a;
+  --hero-border:#596da4;--hero-text:#d1dcf8;--footer-text:#93a4c8;
+  --modal-border:#53648c;
+}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f5f7fc;--nav:#ffffff;--panel:#ffffff;--panel2:#edf1fa;
+  --border:#dbe1ef;--text:#1c2444;--muted:#596985;
+  --accent:#242fa6;--teal:#b5202a;--warn:#97560c;--danger:#b5212b;--blue:#2943ae;
+  --shadow:0 12px 35px #1d2c5615;
+  --input-bg:#f8faff;--input-border:#cbd5e8;--focus-ring:#2d40c42b;
+  --side-label:#7788a8;--nav-item:#425072;--nav-hover:#eff2fd;
+  --nav-active:#e9edff;--nav-active-border:#bbc6f7;
+  --logo-border:#b5202a66;--logo-bg:#b5202a12;--logo-ink:#b5202a;
+  --disclaimer-bg:#fff9ef;--disclaimer-border:#e7d6b9;--disclaimer-text:#5e5141;
+  --metric-start:#ffffff;--metric-end:#f1f4fc;--divider:#e1e6f1;
+  --pill-bg:#edf1fa;--pill-text:#455674;--success:#176a47;--success-bg:#e1f4e9;
+  --warn-bg:#fff1d9;--red-bg:#fce8ea;--blue-bg:#e8edff;
+  --button-bg:#242fa6;--ghost-bg:#f0f3fa;--danger-border:#e5a9ae;
+  --field-label:#405273;--table-heading:#607090;--info-bg:#f3f6fc;
+  --number-bg:#e2e8f8;--success-ink:#ffffff;
+  --hero-glow:#c82a3e14;--hero-start:#e6ebff;--hero-end:#f8faff;
+  --hero-border:#b6c4eb;--hero-text:#46577e;--footer-text:#71819f;
+  --modal-border:#d4ddee;
+}
+/* Both modes keep the recognizable NGS royal-blue navigation strip. */
+.topbar{background:#202aa2;border-bottom-color:#b5202a}
+.crumb,.top-date{color:#ffffff}
+.crumb span{color:#d5dcff}
+.env-pill{border-color:#ffffff55;background:#ffffff17;color:#ffffff}
+.mobile-menu{color:#ffffff}
+.eyebrow,.pulse{color:var(--teal)}
+.brand-icon{border-color:var(--logo-border);background:var(--logo-bg);color:var(--logo-ink)}
+.brand-icon span{color:var(--accent)}
+.sidebar-label{color:var(--side-label)}
+nav button{color:var(--nav-item)}
+nav button:hover{background:var(--nav-hover);color:var(--text)}
+nav button.active{background:var(--nav-active);color:var(--accent);border-color:var(--nav-active-border)}
+select,input,textarea{background:var(--input-bg);border-color:var(--input-border)}
+select:focus,input:focus,textarea:focus{box-shadow:0 0 0 3px var(--focus-ring)}
+.disclaimer{background:var(--disclaimer-bg);border-color:var(--disclaimer-border);border-left-color:var(--warn);color:var(--disclaimer-text)}
+.metric{background:linear-gradient(135deg,var(--metric-start),var(--metric-end))}
+.metric .d{color:var(--muted)}
+.row{border-bottom-color:var(--divider)}
+.pill{background:var(--pill-bg);color:var(--pill-text)}
+.pill.green{background:var(--success-bg);color:var(--success)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)}
+.pill.red{background:var(--red-bg);color:var(--danger)}
+.pill.blue{background:var(--blue-bg);color:var(--blue)}
+.btn{background:var(--button-bg);border-color:var(--button-bg);color:#fff}
+.btn.ghost{background:var(--ghost-bg);color:var(--text);border-color:var(--border)}
+.btn.danger{background:var(--red-bg);color:var(--danger);border-color:var(--danger-border)}
+.field span{color:var(--field-label)}
+th{color:var(--table-heading)}
+td{border-bottom-color:var(--divider)}
+.route-step{background:var(--info-bg)}
+.route-step .number{background:var(--number-bg)}
+.route-step.done .number{background:var(--success);color:var(--success-ink)}
+.guard-hero{background:radial-gradient(circle at 90% 20%,var(--hero-glow),transparent 36%),linear-gradient(125deg,var(--hero-start),var(--hero-end));border-color:var(--hero-border)}
+.guard-hero p{color:var(--hero-text)}
+.directory-card,.mail-preview,.info-box{background:var(--info-bg)}
+.avatar{background:var(--logo-bg);color:var(--logo-ink)}
+.footer{color:var(--footer-text)}
+.modal{background:var(--panel);border-color:var(--modal-border)}
+#toast{background:var(--button-bg);color:#fff}
+#toast.error{background:var(--danger);color:#fff}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:32px;padding:6px 10px;border:1px solid #ffffff66;border-radius:9px;background:#ffffff19;color:#fff;font-size:11px;font-weight:750;white-space:nowrap}
+.theme-toggle:hover{background:#ffffff30;border-color:#ffffffaa}
+.theme-toggle:focus-visible{outline:3px solid #ffffff;outline-offset:2px}
+.theme-toggle-icon{font-size:17px;line-height:1}
+@media(max-width:760px){.theme-toggle{padding:6px 9px}.theme-toggle-label{display:none}}
