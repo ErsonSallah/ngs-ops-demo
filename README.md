@@ -1,23 +1,25 @@
-# NGS OPS — V1 Public Demo
+# NGS OPS — V1.1 Alpha Public Demo
 
-Mobile-first prototype of a private security operations dashboard. All people, sites, and events are **fictional**. This is a browser-only demonstration and **not** an operational security system.
+**Interactive, fictional-data demonstration. This is NOT the authenticated security operations pilot.**
+
+## Demo scope
+- 2 fictional organizations, 3 sites, 5 guards, 2 supervisors, 1 admin
+- Role/persona switcher; simulated organization and site access
+- Command Center, Sites & Routes, Shifts, Patrols, Incidents, Occurrence Book, Post Orders, Directory, Reports, Guard Workspace
+- Simulated GPS status, QR code/manual checkpoint capture, incident review, occurrence entries, post-order acknowledgements
+- Print / Save PDF, Markdown and DOCX report exports
+- **Email report is simulated; no email is actually sent**
+
+The public demo uses browser localStorage and does not authenticate, sync across devices, or prove physical presence. Never enter real client/guard data, security incidents, credentials, or private QR codes.
 
 ## Run
-Open `index.html` locally, or deploy this repository with GitHub Pages (branch `main`, root folder).
+Open [the GitHub Pages demo](https://ersonsallah.github.io/ngs-ops-demo/) once Pages is enabled on `main` at `/(root)`. Alternatively serve `index.html` with a static server.
 
-## Demonstrated workflows
-- Command center and shift visibility
-- Guard and site directory
-- Clock-in / clock-out
-- Checkpoint patrol event logging
-- Incident and daily occurrence reports
-- Post orders and acknowledgements
-- Export / restore sample data
+## Previous version
+The original V1 experience is preserved at [v1/index.html](v1/index.html).
 
-## Security and limitations
-This version stores data in the browser's local storage. It has **no real authentication, multi-user synchronization, verified GPS or QR proof, or server-side audit controls**. Never enter actual guard or client information, real incidents, credentials, or sensitive operational data.
+## Authenticated pilot
+The real pilot is developed separately with React + TypeScript, Supabase Auth, Postgres RLS and protected operations RPCs. The database migration is named `0001_NGS_Ops_alpha.sql`. Production email requires a server-side worker and verified sender; it cannot be implemented securely with GitHub Pages alone.
 
-The private production roadmap is separate from this public prototype.
-
-## Credits
-Concept and product direction: Jefferson Sallah. AI-assisted implementation and testing.
+## Portfolio
+This demo shows product workflow and UI architecture. Do not represent the public preview as a deployed multi-user authenticated system.
